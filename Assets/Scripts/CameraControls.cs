@@ -11,6 +11,8 @@ public class CameraControls : MonoBehaviour
     void Start()
     {
         posOffset = transform.position - target.transform.position;
+        Cursor.visible = false;
+        posOffset = transform.position - target.transform.position;
     }
 
     // Update is called once per frame

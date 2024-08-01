@@ -24,5 +24,7 @@ public class EnemyFollow : MonoBehaviour
             agent.SetDestination(target.position);
         }
     }
+    
+    
 
 }

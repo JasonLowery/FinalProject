@@ -9,12 +9,17 @@ public class Bullet : MonoBehaviour
     void Awake()
     {
         Destroy(gameObject, life);
+        AudioManager.Instance.PlaySound("Bullet");
     }
  
     void OnCollisionEnter(Collision collision)
     {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
         Destroy(collision.gameObject);
+        }
         Destroy(gameObject);
-        AudioManager.Instance.PlaySound("Bullet");
+
+        
     }
 }

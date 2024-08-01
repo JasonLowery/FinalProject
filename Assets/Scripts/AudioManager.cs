@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.Audio;
-using System;
+using System.Collections.Generic;
+using System.Collections;
 
 
 
@@ -67,7 +68,7 @@ public class AudioManager : MonoBehaviour
     public void PlaySound(string name)
     {
 
-        Sound sound = Array.Find(sounds, sound => sound.name == name);
+        Sound sound = System.Array.Find(sounds, sound => sound.name == name);
 
 
 
@@ -87,7 +88,7 @@ public class AudioManager : MonoBehaviour
     public void StopSound(string name)
     {
 
-        Sound sound = Array.Find(sounds, sound => sound.name == name);
+        Sound sound = System.Array.Find(sounds, sound => sound.name == name);
 
 
 
